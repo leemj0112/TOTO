@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ColliderColor : MonoBehaviour
 {
-    public Color gizmoColor = new Color(1f, 0f, 0f, 0.5f); // 반투명 빨간색
+    public Color gizmoColor = new Color(1f, 0f, 0f, 0.5f); //반투명 빨간색
 
     void OnDrawGizmos()
     {
