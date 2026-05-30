@@ -15,9 +15,15 @@ public class DoorController : MonoBehaviour
     {
         
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.collider.name == "Toto")
+        {
             SceneManager.LoadScene("GameScene");
+        }
+        else
+        {
+            Debug.Log("문은 토토만 열 수 있습니다!");
+        }
     }
 }
