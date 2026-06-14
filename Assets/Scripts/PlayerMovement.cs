@@ -18,6 +18,17 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private LayerMask groundLayer;
 
+    [SerializeField] private Animator animator;
+
+    private void Start()
+    {
+        // Start 안의 GetComponentInChildren 코드는 과감히 지우거나 주석 처리합니다.
+        if (animator == null)
+        {
+            animator = GetComponentInChildren<Animator>();
+        }
+    }
+
     void Update()
     {
         if (CameraController == true)
@@ -29,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButtonDown("Jump") && IsGrounded())
             {
                 rb.velocity = new Vector2(rb.velocity.x, JumpingPower);
+                if (animator != null) animator.SetTrigger("doJump");
             }
 
             if (Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
@@ -42,6 +54,19 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             return;
+        }
+
+        // [애니메이션 상태 실시간 업데이트]
+        if (animator != null)
+        {
+            // 1. 걷기/대기 제어: 좌우 입력 크기를 넘겨줍니다 (0이면 Idle, 0보다 크면 Walk)
+            animator.SetFloat("MoveSpeed", Mathf.Abs(horizontal));
+
+            // 2. 땅 위에 있는지 여부를 전달합니다.
+            animator.SetBool("isGrounded", IsGrounded());
+
+            // 3. Y축 속도를 전달하여 상승(Loop)/하강(End)을 구분합니다.
+            animator.SetFloat("yVelocity", rb.velocity.y);
         }
     }
 

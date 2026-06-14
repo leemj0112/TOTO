@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6183430921413440245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: Jump_Loop
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 82aa24613e0d50440b80e308435629c6, type: 2}
+  animationName: Jump_Loop
+--- !u!114 &-3693735338311641201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: Dead
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 82aa24613e0d50440b80e308435629c6, type: 2}
+  animationName: Dead
+--- !u!114 &-3347712738688728981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: Skill_End
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 82aa24613e0d50440b80e308435629c6, type: 2}
+  animationName: Skill_End
+--- !u!114 &-1155397585832194889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: Idle
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 82aa24613e0d50440b80e308435629c6, type: 2}
+  animationName: Idle
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f30f83b4b98ce44cbae81286c0efac1, type: 3}
+  m_Name: Toto_AnimationReferences
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 82aa24613e0d50440b80e308435629c6, type: 2}
+--- !u!114 &4310839626607223065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: Jump_Start
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 82aa24613e0d50440b80e308435629c6, type: 2}
+  animationName: Jump_Start
+--- !u!114 &5240697620907892403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: Jump_End
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 82aa24613e0d50440b80e308435629c6, type: 2}
+  animationName: Jump_End
+--- !u!114 &5495946090714168600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: Skill_Loop
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 82aa24613e0d50440b80e308435629c6, type: 2}
+  animationName: Skill_Loop
+--- !u!114 &5989669700590865769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: Walk
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 82aa24613e0d50440b80e308435629c6, type: 2}
+  animationName: Walk
+--- !u!114 &8229713272703527353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: Skill_Start
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 82aa24613e0d50440b80e308435629c6, type: 2}
+  animationName: Skill_Start
+--- !u!114 &9049755556320969143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: Respawn
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 82aa24613e0d50440b80e308435629c6, type: 2}
+  animationName: Respawn
