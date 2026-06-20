@@ -1,29 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class DoorController : MonoBehaviour
 {
+    public bool openBool = false;
+    public Sprite openDoor;
+    private SpriteRenderer spriteRenderer;
+
     void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.collider.name == "Toto")
+        if (openBool && spriteRenderer.sprite != openDoor)
         {
-            SceneManager.LoadScene("GameScene");
+            spriteRenderer.sprite = openDoor;
         }
-        else
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (!openBool)
         {
-            Debug.Log("문은 토토만 열 수 있습니다!");
+            return;
+        }
+
+        if (collision.name == "Toto" || collision.name == "Toto Variant")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
     }
 }

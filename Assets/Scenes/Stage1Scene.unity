@@ -1680,11 +1680,6 @@ Transform:
   - {fileID: 59696569}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &881497759 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1887293006535534941, guid: 84b9cfa1d05ad0440a14470ce1ab50eb, type: 3}
-  m_PrefabInstance: {fileID: 493280845570204211}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1101860333 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3969745303314119913, guid: f6bad100fbf180d40834b0dd4c51487a, type: 3}
@@ -1972,14 +1967,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9005776287854776071, guid: 5b0352437d543da4bb9dcf84473ba8a7, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e7de9cd1f03845c419e1cebd6ef875d8, type: 3}
-    - target: {fileID: 2826720581473633531, guid: 84b9cfa1d05ad0440a14470ce1ab50eb, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 881497759}
     - target: {fileID: 6004285979105047357, guid: 84b9cfa1d05ad0440a14470ce1ab50eb, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -2028,8 +2015,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 9005776287854776071, guid: 5b0352437d543da4bb9dcf84473ba8a7, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2529,11 +2515,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 267113134422221546, guid: f6bad100fbf180d40834b0dd4c51487a, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4543017738589580388, guid: f6bad100fbf180d40834b0dd4c51487a, type: 3}
+    - target: {fileID: 1574262660581874248, guid: f6bad100fbf180d40834b0dd4c51487a, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
@@ -2579,7 +2561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8902071783177933430, guid: f6bad100fbf180d40834b0dd4c51487a, type: 3}
       propertyPath: m_Name
-      value: Bubu
+      value: Bubu Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

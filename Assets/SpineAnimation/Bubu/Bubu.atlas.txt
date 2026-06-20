@@ -1,0 +1,42 @@
+Bubu.png
+size:2017,954
+filter:Linear,Linear
+pma:true
+꼬리
+bounds:1871,35,176,93
+rotate:90
+머리
+bounds:546,314,638,615
+offsets:2,1,641,618
+rotate:90
+모자
+bounds:683,64,248,150
+rotate:90
+몸통
+bounds:2,313,542,639
+offsets:1,2,544,642
+솜
+bounds:1187,39,229,128
+앞치마
+bounds:1163,374,376,578
+오른쪽 귀
+bounds:1541,616,336,474
+rotate:90
+오른쪽 다리
+bounds:1530,15,196,339
+rotate:90
+오른쪽 팔
+bounds:835,69,243,350
+rotate:90
+왼쪽 귀
+bounds:1541,213,401,455
+rotate:90
+왼쪽 다리
+bounds:1187,169,203,341
+rotate:90
+왼쪽 팔
+bounds:349,51,260,332
+rotate:90
+코
+bounds:2,2,309,345
+rotate:90

@@ -42,6 +42,14 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, JumpingPower);
                 if (animator != null) animator.SetTrigger("doJump");
             }
+            else
+            {
+                // 점프 버튼을 누르지 않은 평소에는 doJump 트리거가 남아있지 않도록 강제로 리셋합니다.
+                if (animator != null && IsGrounded())
+                {
+                    animator.ResetTrigger("doJump");
+                }
+            }
 
             if (Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
             {

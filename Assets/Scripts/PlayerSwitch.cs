@@ -15,16 +15,16 @@ public class PlayerSwitch : MonoBehaviour
     [Header("전체 캐릭터 리스트")]
     public PlayerData[] players;
 
-    // 현재 조작 중인 플레이어 데이터
+    //현재 조작 중인 캐릭터 데이터
     private PlayerData currentPlayer;
-    // 💡 현재 플레이어가 '실제로 밟고 서 있는 전환소'의 캐릭터 데이터
+    //현재 캐릭터가 실제로 밟고 서 있는 전환소의 캐릭터 데이터
     private PlayerData targetStationPlayer = null;
 
     void Start()
     {
         if (players == null || players.Length == 0) return;
 
-        // 1. Toto(0번)는 처음부터 해금
+        //Toto(0번)는 처음부터 해금
         players[0].isUnlocked = true;
         currentPlayer = players[0];
 
@@ -33,7 +33,7 @@ public class PlayerSwitch : MonoBehaviour
 
     void Update()
     {
-        // 💡 규칙 1: 전환소 안에 있고, 'E'키를 눌렀을 때만 발동!
+        //전환소 안에 있고, 'E'키를 눌렀을 때만 발동
         if (targetStationPlayer != null && Input.GetKeyDown(KeyCode.E))
         {
             HandleSwitchLogic();
@@ -59,12 +59,11 @@ public class PlayerSwitch : MonoBehaviour
             }
         }
 
-        // 💡 캐릭터 스왑 진행
+        //캐릭터 스왑 진행
         currentPlayer = targetStationPlayer;
         ApplyControl();
 
-        // 🌟 [추가] 스왑된 직후에는 타겟 유효성을 순간적으로 비워줌으로써 
-        // OnTriggerStay2D가 새 주인공 기준으로 안전하게 타겟을 다시 잡도록 유도함!
+        // 스왑된 직후에는 타겟 유효성을 순간적으로 비워줌, OnTriggerStay2D가 새 캐릭터 기준으로 안전하게 타겟을 다시 잡도록 유도
         targetStationPlayer = null;
 
         Debug.Log($"주도권 변경: 이제 [{currentPlayer.characterName}]을(를) 조작합니다.");
@@ -76,17 +75,16 @@ public class PlayerSwitch : MonoBehaviour
         {
             if (players[i] == currentPlayer)
             {
-                // 🌟 1. 현재 조작 중인 주인공 캐릭터는 무조건 독보적인 1등 (Priority: 20)
+                // 현재 조작 중인 주인공 캐릭터는 무조건 1등 (Priority: 20)
                 players[i].vCam.Priority = 20;
                 players[i].movementScript.CameraController = true;
             }
             else
             {
-                // 🌟 2. 조작권이 없는 나머지 캐릭터들은 이동을 끄고 카메라 우선순위를 바닥으로 내림
+                //조작권이 없는 나머지 캐릭터들은 이동을 끄고 카메라 우선순위를 바닥으로 내림
                 players[i].movementScript.CameraController = false;
 
-                // 여기서 중요! Toto는 기본 캐릭터이므로 조작권이 없을 때 Priority를 10으로, 
-                // 나머지 서브 캐릭터들(Morang, Dasiy 등)은 5로 줘서 서브 캐릭터들끼리 카메라가 겹치지 않게 방어막을 침!
+                // Toto는 기본 캐릭터이므로 조작권이 없을 때 Priority를 10으로, 나머지 서브 캐릭터들은 5로 줘서 서브 캐릭터들끼리 카메라가 겹치지 않게 함
                 if (players[i].characterName == "Toto")
                 {
                     players[i].vCam.Priority = 10;
@@ -99,12 +97,12 @@ public class PlayerSwitch : MonoBehaviour
         }
     }
 
-    // 💡 전환소 스크립트가 진입할 때 자기 주인의 '스크립트'를 던져주면, 매니저가 매칭함
+    //전환소 스크립트가 진입할 때 자기 주인의 스크립트를 던져주면, 매니저가 매칭
     public void SetTargetStation(bool isInside, PlayerMovement stationOwner)
     {
         if (isInside && stationOwner != null)
         {
-            // 던져준 스크립트와 일치하는 플레이어 데이터를 찾아서 타겟으로 설정
+            //던져준 스크립트와 일치하는 플레이어 데이터를 찾아서 타겟으로 설정
             foreach (var p in players)
             {
                 if (p.movementScript == stationOwner)
@@ -116,7 +114,7 @@ public class PlayerSwitch : MonoBehaviour
         }
         else
         {
-            // 전환소에서 나가면 타겟을 비움
+            //전환소에서 나가면 타겟을 비움
             targetStationPlayer = null;
         }
     }
